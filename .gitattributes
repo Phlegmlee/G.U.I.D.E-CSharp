@@ -1,0 +1,11 @@
+# Normalize EOL for all files that Git considers text files.
+* text=auto eol=lf
+
+# Only include the addons/guideCS folder when downloading from the Asset Library.
+/**        export-ignore
+/addons    !export-ignore
+/addons/guideCS !export-ignore
+/addons/guideCS/** !export-ignore
+# also include the examples folder
+/guideCS_examples !export-ignore
+/guideCS_examples/** !export-ignore
