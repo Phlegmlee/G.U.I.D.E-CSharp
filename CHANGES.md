@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Addition
 - Resource creation streamlining.
 
-## [0.12.0-002] - 2026-03-27
+## [0.12.0-003] - 2026-04-26
+### Added
+- Sub-addon functionality.
+### Changed
+- Degraded features unique to 4.6 to make the plugin compatable with the same base version as GUIDE.
+
+## [0.12.0-002] - 2026-04-14
 ### Fixed
 - Missing `#if TOOLS` pre-compiler directive added to `Plugin.cs`. See https://github.com/DFGameDev/GuideCSharpWrapper/pull/2.
