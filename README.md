@@ -23,15 +23,13 @@ Until this plugin gets added to the asset browser, this is where the docs live. 
 # Installation
 
 1. Download, install and run GodotSharp (this is different than the standard Godot editor).
-2. Install the GUIDE GDScript addon normally. Follow the nicely done <a href="https://youtu.be/gNiiaNViaUg?si=WB1lNpfeOl3FvG-7">GUIDE tutorial</a> here if you're starting from scratch.
-3. Download the matching GuideCs addon for your GUIDE version. Since the wrapper does not add functionality, the version of GuideCs should be the same as the base addon. Mismatched versions mean new calls may not be in the wrapper or it may have calls other versions of GUIDE cannot fulfil. I don't plan to backfill for previous versions and will only rarely be updating the addon to the latest version of GUIDE as this was made for my own personal project but I'll do what I can to keep things in line.
-4. Copy the GuideCs zip contents into your addons folder beside the 'guide' addon. GuideCs was built to function like a normal addon but has not been released as an official addon (yet?).
+2. Copy the G.U.I.D.E-CSharp `guideCS` into your addons folder.
 <details>
   <summary>Image</summary>
 <img width="533" height="265" alt="2026-03-30_16h58_32" src="https://github.com/user-attachments/assets/bb276b0a-b0b0-444d-abdc-0ad1946f8df6" />
 </details>
 
-5. Build your project (important).
+3. Build your project (important).
 <details>
   <summary>Image</summary>
   <img width="444" height="155" alt="image" src="https://github.com/user-attachments/assets/622f33e7-6839-4783-acc3-8e1c8f7de46b" />
@@ -49,7 +47,7 @@ If you do not have the build option, you'll need to add a new C# script to your 
 
 Any script is fine; this will just tell Godot your project is a C# project.
 
-6. Enable GuideCs in your Project > Project Setting > Plugins list.
+4. Enable G.U.I.D.E C# in your Project > Project Setting > Plugins list.
 <details>
   <summary>Image</summary>
   <img width="622" height="236" alt="image" src="https://github.com/user-attachments/assets/32f176ff-5ad7-4b52-8644-0b5c91736145" />
@@ -59,14 +57,9 @@ If you get the error:
 "Unable to load addon script from path: 'res://addons/GuideCs/Plugin.cs'."
 Restart the editor, rebuild your project and try again. GuideCs was made with Godot 4.6 so there's a possibility other versions of Godot might not work. Its very lightweight though so you can also just manually load the GuideCs autoloader yourself without loading it as an addon if you want (see next step).
 
-7. Navigate to the Project > Project Setting > Globals list and make sure GuideCs is loaded <i>after</i> (below) the GUIDE autoloader. GuideCs captures a reference to GUIDE on load so GUIDE must be loaded first.
-<details>
-  <summary>Image</summary>
-  <img width="854" height="440" alt="image" src="https://github.com/user-attachments/assets/8d0213b9-3f0c-474b-8100-4e89ed398088" />
-</details>
+5. (Potentially optional) Restart the editor. There is an <a href="https://github.com/godotengine/godot/issues/116169">issue</a> that prevents externally loaded GlobalScope objects from being recognized by the editor until after a restart. Once this is fixed, you likely wont need to do it but, if you don't see the GuideCs resources in the list (denoted by the blood orange versions), try restarting your editor.
 
-8. (Potentially optional) Restart the editor. There is an <a href="https://github.com/godotengine/godot/issues/116169">issue</a> that prevents externally loaded GlobalScope objects from being recognized by the editor until after a restart. Once this is fixed, you likely wont need to do it but, if you don't see the GuideCs resources in the list (denoted by the blood orange versions), try restarting your editor.
-9. Enjoy!
+6. Enjoy!
 
 # Usage
 
