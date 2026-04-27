@@ -15,6 +15,7 @@ config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 
 [autoload]
 
+GuideCs="*res://addons/guideCS/Guide.cs"
 GUIDE="*res://addons/guideCS/guide/guide.gd"
 
 [dotnet]

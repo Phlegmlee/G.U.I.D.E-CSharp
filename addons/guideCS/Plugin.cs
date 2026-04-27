@@ -15,14 +15,14 @@ public partial class Plugin : EditorPlugin
     public override void _EnablePlugin()
     {
         AddAutoloadSingleton("GuideCs", $"{PluginPath}/Guide.cs");
-        editorInterface.SetPluginEnabled("addons/guideCS/guide", true);
+        editorInterface.SetPluginEnabled($"{PluginPath}/guide", true);
         base._EnablePlugin();
     }
     
     public override void _DisablePlugin()
     {
         RemoveAutoloadSingleton("GuideCs");
-        editorInterface.SetPluginEnabled("addons/guideCS/guide", false);
+        editorInterface.SetPluginEnabled($"{PluginPath}/guide", false);
         base._DisablePlugin();
     }
 
