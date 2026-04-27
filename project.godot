@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="G.U.I.D.E-CSharp"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+
+[autoload]
+
+GUIDE="*res://addons/guideCS/guide/guide.gd"
 
 [dotnet]
 
@@ -19,7 +23,7 @@ project/assembly_name="G.U.I.D.E-CSharp"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/guideCS/plugin.cfg")
+enabled=PackedStringArray("res://addons/guideCS/guide/plugin.cfg", "res://addons/guideCS/plugin.cfg")
 
 [rendering]
 
