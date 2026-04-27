@@ -6,7 +6,9 @@ _Note: This version utilises a C# Wrapper originally made by @DFGameDev. If you 
 
 ---
 
-This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the <a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a> provided by derkork and is updated in tandem with the original plugin until such a time that a better alternative comes along.
+This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the <a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a> provided by derkork and [guidecsharpwrapper](https://github.com/DFGameDev/GuideCSharpWrapper) by DFGameDev.
+
+This is updated in tandem with the original plugin until such a time that a better alternative comes along.
 
 For all documentation: any reference to base G.U.I.D.E. files and systems will be referred as GUIDE (all caps) while any reference to the C# wrapper will be GuideCS or GUIDE-CSharp for simplicity sake.
 
