@@ -25,4 +25,5 @@ editable = false
 selecting_enabled = false
 script = ExtResource("2_xyoam")
 
+[connection signal="action_dropped" from="LineEdit" to="." method="_on_line_edit_action_dropped"]
 [connection signal="focus_entered" from="LineEdit" to="." method="_on_line_edit_focus_entered"]
