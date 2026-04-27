@@ -8,7 +8,7 @@ _Note: This version utilises a C# Wrapper originally made by @DFGameDev. If you 
 
 This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the <a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a> provided by derkork and is updated in tandem with the original plugin until such a time that a better alternative comes along.
 
-For all documentation: any reference to base G.U.I.D.E. files and systems will be referred as GUIDE (all caps) while any reference to the C# wrapper will be GuideCS or GuideCs (camel case) for simplicity sake.
+For all documentation: any reference to base G.U.I.D.E. files and systems will be referred as GUIDE (all caps) while any reference to the C# wrapper will be GuideCS or GUIDE-CSharp for simplicity sake.
 
 # Preamble
 
@@ -23,12 +23,7 @@ Until this plugin gets added to the asset browser, this is where the docs live. 
 # Installation
 
 1. Download, install and run GodotSharp (this is different than the standard Godot editor).
-2. Copy the G.U.I.D.E-CSharp `guideCS` into your addons folder.
-<details>
-  <summary>Image</summary>
-<img width="533" height="265" alt="2026-03-30_16h58_32" src="https://github.com/user-attachments/assets/bb276b0a-b0b0-444d-abdc-0ad1946f8df6" />
-</details>
-
+2. Copy the GUIDE-CSharp plugin folder `guideCS` into your addons folder.
 3. Build your project (important).
 <details>
   <summary>Image</summary>
@@ -50,7 +45,7 @@ Any script is fine; this will just tell Godot your project is a C# project.
 4. Enable G.U.I.D.E C# in your Project > Project Setting > Plugins list.
 <details>
   <summary>Image</summary>
-  <img width="622" height="236" alt="image" src="https://github.com/user-attachments/assets/32f176ff-5ad7-4b52-8644-0b5c91736145" />
+  <img width="609" height="234" alt="plugin-enabled" src="https://github.com/user-attachments/assets/fcfd4e19-aac5-4382-b074-1fd00e740493" />
 </details>
 
 If you get the error:
