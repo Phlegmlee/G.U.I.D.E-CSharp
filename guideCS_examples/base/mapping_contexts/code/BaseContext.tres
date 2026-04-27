@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GuideMappingContext" load_steps=3 format=3 uid="uid://irj664f54feu"]
+
+[ext_resource type="Script" path="res://addons/guideCS/GuideMappingContext.cs" id="1_7tcoq"]
+[ext_resource type="Resource" uid="uid://b5qd3arpddpdw" path="res://guideCS_examples/base/mapping_contexts/editor/base_context.tres" id="1_wvdff"]
+
+[resource]
+script = ExtResource("1_7tcoq")
+BaseGuideObject = ExtResource("1_wvdff")

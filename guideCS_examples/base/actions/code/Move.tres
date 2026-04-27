@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GuideAction" load_steps=3 format=3 uid="uid://bowuck2wvxblg"]
+
+[ext_resource type="Resource" uid="uid://eac5kbous7jr" path="res://guideCS_examples/base/actions/editor/move.tres" id="1_c4ght"]
+[ext_resource type="Script" path="res://addons/guideCS/GuideAction.cs" id="1_eqy1m"]
+
+[resource]
+script = ExtResource("1_eqy1m")
+BaseGuideObject = ExtResource("1_c4ght")

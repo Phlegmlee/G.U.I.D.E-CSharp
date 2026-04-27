@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bopddhurl3cup"]
+
+[ext_resource type="Script" path="res://guideCS_examples/base/PlayerEntity.cs" id="1_ucxkk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_81kh3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_08rue"]
+radius = 10.0
+height = 30.0
+
+[node name="BasePlayArea" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ucxkk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_81kh3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+mesh = SubResource("CapsuleMesh_08rue")

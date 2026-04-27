@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GUIDEAction" load_steps=2 format=3 uid="uid://eac5kbous7jr"]
+
+[ext_resource type="Script" path="res://addons/guideCS/guide/guide_action.gd" id="1_yqha6"]
+
+[resource]
+script = ExtResource("1_yqha6")
+name = &"move"
+action_value_type = 2
+block_lower_priority_actions = true
+emit_as_godot_actions = false
+is_remappable = false
+display_name = ""
+display_category = ""
