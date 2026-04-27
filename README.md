@@ -42,7 +42,7 @@ If you do not have the build option, you'll need to add a new C# script to your 
 
 Any script is fine; this will just tell Godot your project is a C# project.
 
-4. Enable G.U.I.D.E C# in your Project > Project Setting > Plugins list.
+4. Enable GUIDE-CSharp in your Project > Project Setting > Plugins list.
 <details>
   <summary>Image</summary>
   <img width="609" height="234" alt="plugin-enabled" src="https://github.com/user-attachments/assets/fcfd4e19-aac5-4382-b074-1fd00e740493" />
