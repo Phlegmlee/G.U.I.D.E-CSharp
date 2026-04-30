@@ -15,3 +15,7 @@ This is updated in tandem with the original plugin until such a time that a bett
 Full documentation for G.U.I.D.E is available [here](https://godotneers.github.io/G.U.I.D.E/).
 
 Full documentation for the wrapper is available [here](https://phlegmlee.github.io/G.U.I.D.E-CSharp).
+
+## Issues
+
+If you found an issue while using this plugin, any part of it, including the official G.U.I.D.E addon, create an [issue](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues).
