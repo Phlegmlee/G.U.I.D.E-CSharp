@@ -12,4 +12,6 @@ This is updated in tandem with the original plugin until such a time that a bett
 
 ## Documentation
 
-Full documentation available [here](https://phlegmlee.github.io/G.U.I.D.E-CSharp).
+Full documentation for G.U.I.D.E is available [here](https://godotneers.github.io/G.U.I.D.E/).
+
+Full documentation for the wrapper is available [here](https://phlegmlee.github.io/G.U.I.D.E-CSharp).
