@@ -24,6 +24,8 @@ author: Phlegmlee
 description: >- # this means to ignore newlines until "baseurl:"
   A C# wrapped version of G.U.I.D.E, a simple but powerful way to handle input in the Godot Engine.
 
+  This plugin is updated in tandem with the original plugin until such a time that a better alternative comes along.
+
 baseurl: "/G.U.I.D.E-CSharp" # the subpath of your site, e.g. /blog
 
 url: "https://Phlegmlee.github.io/" # the base hostname & protocol for your site, e.g. http://example.com

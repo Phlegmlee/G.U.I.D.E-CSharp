@@ -8,67 +8,67 @@ _Note: This version utilises a C# Wrapper originally made by @DFGameDev. If you 
 
 ---
 
-This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the <a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a> provided by derkork and [guidecsharpwrapper](https://github.com/DFGameDev/GuideCSharpWrapper) by DFGameDev.
+G.U.I.D.E-CSharp has full functionality on its own, see the [Changelog](CHANGES.md) for current version information. 
 
-This is updated in tandem with the original plugin until such a time that a better alternative comes along.
+This plugin includes:
+- the C# wrapper
+- the full guide plugin as a [sub-plugin](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_plugins.html#using-sub-plugins).
 
-**For all documentation:** any reference to base G.U.I.D.E. files and systems will be referred as GUIDE (all caps) while any reference to the C# wrapper will be GuideCS or GUIDE-CSharp for simplicity sake.
+The [GUIDE](https://github.com/godotneers/G.U.I.D.E) portion included in this plugin will be kept up to date with the releases.
 
-GuideCs has full functionality on its own, see the [Changelog](CHANGES.md) for current version information. This addon has the C# wrapper, and the full guide addon as a [sub-addon](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_plugins.html#using-sub-plugins).
+## Quick Start
 
-The sub-addon portion of this plugin will be updated to match releases of the main [GUIDE](https://github.com/godotneers/G.U.I.D.E) plugin.
+1. Make sure you are using the C# version of Godot (Godot-Mono/GodotSharp) and it is at lease version 4.2 or greater.
+1. Aquire the plugin using one of the following:
+	- Use the asset browser within Godot (Search "unified")
+	- [Godot Asset Store](https://godotengine.org/asset-library/asset/5104)
+	- [Repository Releases](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/releases)
+1. Build your project, C# is a compiled language so you must build the C# portion of the plugin.
+	<details>
+	<summary>How to Build</summary>
+	<img width="444" height="155" alt="image" src="https://github.com/user-attachments/assets/622f33e7-6839-4783-acc3-8e1c8f7de46b" /><br>
+	<p>If build option is missing:</p>
+	<img width="435" height="147" alt="image" src="https://github.com/user-attachments/assets/8abbf9c9-d116-469f-ad8b-dafdd0692f8c" /><br>
+	<p>Use Project > Tools > C# > Create C# Solution</p>
+	<img width = "550" height="155" alt="image" src="assets/images/godotcs_create_solution.png">
+	<p>After the solution is created, the build option should show up.</p>
+	</details>
+1. Enable GUIDE-CSharp in your Project > Project Setting > Plugins list.
+	<details>
+	<summary>Image</summary>
+	<img width="609" height="234" alt="plugin-enabled" src="https://github.com/user-attachments/assets/fcfd4e19-aac5-4382-b074-1fd00e740493" />
+	</details>
+1. Restart your project.
+	<details>
+	<summary>Image</summary>
+	<img width="400" height="400" alt="plugin-enabled" src="assets/images/reload_project.png" />
+	</details>
 
-## Installation
+## Usage
 
-1. Download, install and run GodotSharp (this is different than the standard Godot editor).
-2. Copy the GUIDE-CSharp plugin folder `guideCS` into your addons folder.
-3. Build your project (important).
-<details>
-  <summary>Image</summary>
-  <img width="444" height="155" alt="image" src="https://github.com/user-attachments/assets/622f33e7-6839-4783-acc3-8e1c8f7de46b" />
-</details>
+G.U.I.D.E-CSharp is designed to follow all the normal calls exposed by GUIDE so most of what you do with the wrapper is exactly the same other than using CamelCase instead of snake_case.
 
-If you do not have the build option, you'll need to add a new C# script to your project first:
-<details>
-  <summary>Image</summary>
-  <img width="435" height="147" alt="image" src="https://github.com/user-attachments/assets/8abbf9c9-d116-469f-ad8b-dafdd0692f8c" /><br>
-  
-  <img width="558" height="422" alt="image" src="https://github.com/user-attachments/assets/6bf10c3c-2129-4cbc-83ff-d9f1e2427840" /><br>
-  
-  <img width="528" height="402" alt="image" src="https://github.com/user-attachments/assets/7bc24c0f-ccbf-4f12-b8af-043f844df724" />
-</details>
+Example:
 
-Any script is fine; this will just tell Godot your project is a C# project.
+```cs
 
-4. Enable GUIDE-CSharp in your Project > Project Setting > Plugins list.
-<details>
-  <summary>Image</summary>
-  <img width="609" height="234" alt="plugin-enabled" src="https://github.com/user-attachments/assets/fcfd4e19-aac5-4382-b074-1fd00e740493" />
-</details>
+// GDScript
 
-If you get the error:
-"Unable to load addon script from path: 'res://addons/GuideCs/Plugin.cs'."
-Restart the editor, rebuild your project and try again. GuideCs was made with Godot 4.6 so there's a possibility other versions of Godot might not work. Its very lightweight though so you can also just manually load the GuideCs autoloader yourself without loading it as an addon if you want (see next step).
+GUIDE.enable_mapping_context()
 
-5. (Potentially optional) Restart the editor. There is an <a href="https://github.com/godotengine/godot/issues/116169">issue</a> that prevents externally loaded GlobalScope objects from being recognized by the editor until after a restart. Once this is fixed, you likely wont need to do it but, if you don't see the GuideCs resources in the list (denoted by the blood orange versions), try restarting your editor.
+// C#
 
-6. Enjoy!
+Guide.EnableMappingContext();
 
-# Usage
+```
 
-GuideCs is designed to follow all the normal calls exposed by GUIDE so most of what you do with the wrapper is exactly the same other than using CamelCase instead of snake_case.
+C# Editor resources are handled with a duplicate resource type, denoted by the _blood orange_ color variation and a C# icon.
+<img width="50" height="50" alt="image" src="assets/images/GuideActionCs.svg" />
+<img width="50" height="50" alt="image" src="assets/images/GuideMappingContextCs.svg" />
 
-So, if you want to call `GUIDE.enable_mapping_context()`, you would simply call `Guide.EnableMappingContext()`.
+Anything you want to do in the editor, use GUIDE resources. 
 
-C# Editor resources are handled with a duplicate resource type denoted by the 'blood orange' color variation in the list.
-<details>
-  <summary>Image</summary>
-  <img width="903" height="296" alt="image" src="https://github.com/user-attachments/assets/f8944be5-4a71-455e-acfd-d9a3e11aa84b" /><br>
-  
-  <img width="907" height="292" alt="image" src="https://github.com/user-attachments/assets/8b3c1566-ef92-475f-b0ac-6faa81e9fc20" /><br>
-</details>
-
-Anything you want to do in the editor, use GUIDE resources. Anything you want to do in C#, use a GuideCs resource that is assigned a base GUIDE object.
+Anything you want to do in C#, use a GuideCs resource that is assigned a base GUIDE object.
 
 For example:
 If you want to create some GUIDEActions and GUIDEMappingContexts to follow along with the tutorial, create the resources as normal.
