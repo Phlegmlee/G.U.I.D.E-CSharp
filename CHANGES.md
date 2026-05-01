@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
+## [0.2.5--0.12.0] - 2026-04-30
+### Fixed
+- Guide plugin path was using string interpolation, this was causing issues with new projects. Switched to a static relative path instead.
+
 ## [0.2.4--0.12.0] - 2026-04-27
 ### Addition
 - Resource creation streamlined, upon creation of a GUIDEAction or GUIDEMappingContext resource, an additional CS wrapper will be created and the GUIDE resource assigned to the wrapper automatically.
