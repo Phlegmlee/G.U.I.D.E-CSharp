@@ -1,75 +1,60 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html lang="{{ site.lang | default: "en-US" }}">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  {% include head-custom.html %}
-</head>
+    {% include head-custom.html %}
+  </head>
+  <body>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1 class="title">{{ site.title | default: site.github.repository_name }}</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">{{ site.description | default: site.github.project_tagline }}</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          {% if site.show_downloads %}
-          <a href="{{ site.github.zip_url }}" class="download-button zip"><span>Download</span></a>
-		  <a class="download-button zip" target="_blank" href="{{ site.github.asset_lib_url }}"><span>Godot Asset Library</span></a>
-          {% endif %}
-          <a href="{{ site.github.repository_url }}" class="code">View {{ site.title | default: site.github.repository_name }} on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          {{ content }}
-        </article>
-      </div>
+      <header>
+        <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+        {% if site.show_downloads %}
+          <div class="downloads">
+            <span>Downloads:</span>
+            <ul>
+              <li><a href="{{ site.github.zip_url }}" target="_blank" class="button">ZIP</a></li>
+              <li><a href="{{ site.github.asset_lib_url }}" target="_blank" class="button">ASSET LIB</a></li>
+            </ul>
+          </div>
+        {% endif %}
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        {{ content }}
+
+      </section>
+      <footer>
+		<p><small>
+  			This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the 
+  			<a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a>  
+  			provided by derkork and <a href= "https://github.com/DFGameDev/GuideCSharpWrapper">guidecsharpwrapper</a> by DFGameDev.
+		</small></p>
+        {% if site.github.is_project_page %}
+          <small><p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></small></p>
+        {% endif %}
+      </footer>
     </div>
-    <footer>
-      <div class="owner">
-      {% if site.github.is_project_page %}
-      <p><a href="{{ site.github.owner_url }}" class="avatar"><img src="{{ site.github.owner_gravatar_url }}" width="48" height="48"></a> <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> maintains <a href="{{ site.github.repository_url }}">{{ site.title | default: site.github.repository_name }}</a></p>
-      {% endif %}
-
-       {% if site.github.is_user_page %}
-      <p><a href="{{ site.github.owner_url }}" class="avatar"><img src="{{ site.github.owner_gravatar_url }}" width="48" height="48"></a>View <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> on <a href="https://www.github.com">GitHub</a></p>
-      {% endif %}
-
-      </div>
-      <div class="creds">
-		<p>
-          This is an unofficial project created to make the G.U.I.D.E. system accessible to Godot C# projects. This builds directly off the 
-          <a href="https://github.com/godotneers/G.U.I.D.E">Godot Unified Input Detection Engine</a>  
-          provided by derkork and <a href= "https://github.com/DFGameDev/GuideCSharpWrapper">guidecsharpwrapper</a> by DFGameDev.
-        </p>
-		<small>
-			Copyright © 2026 - Phlegmlee
-		</small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    {% if site.show_downloads %}
-    <a href="{{ site.github.tar_url }}" class="tar">tar</a>
-    <a href="{{ site.github.zip_url }}" class="zip">zip</a>
-    <a href="{{ site.github.repository_url }}" class="code">source code</a>
-    {% endif %}
-    <p class="name"></p>
-  </div>
-</body>
+  </body>
 </html>
