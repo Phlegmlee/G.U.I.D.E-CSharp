@@ -42,7 +42,7 @@ github_username:  "Phlegmlee"
 github_repo: "G.U.I.D.E-CSharp"
 github_branch: "main"
 
-remote_theme: pages-themes/dinky@v0.2.0
+remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
