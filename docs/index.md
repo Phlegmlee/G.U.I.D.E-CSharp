@@ -174,7 +174,7 @@ public partial class Main : Node2D
 - You can load the GUIDE content as anything needed using casting without issue.
 
 ## Issues
-If you have any problems while using this plugin, create an [issue](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues). All issues should be created in the G.U.I.D.E-CSharp repository, **even if the problem seems to be from the base G.U.I.D.E plugin, all issues related to the use of this plugin stay within this repository.**
+If you have any problems while using this plugin, create an [issue](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues). All issues should be created in the G.U.I.D.E-CSharp repository, **even if the problem seems to be from the base G.U.I.D.E plugin, all issues related to the use of this plugin should stay within this repository.**
 
 ## Gotchas
 Current problems that have yet to be solved or can't be solved.
