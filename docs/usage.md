@@ -152,4 +152,7 @@ public partial class Main : Node2D
 - This means that G.U.I.D.E-CSharp references everything as a `GodotObject`.
 - You can load the GUIDE content as anything needed using casting without issue.
 
+
+### Read Next -> [G.U.I.D.E Docs (External)](https://godotneers.github.io/G.U.I.D.E/)
+
 ### Read Next -> [Gotchas](gotchas.html)

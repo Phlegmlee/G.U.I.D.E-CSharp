@@ -30,4 +30,7 @@ Current problems that have yet to be solved or can't be solved.
 var tester = (Node)ResourceLoader.Load<CSharpScript>("res://addons/GuideCs/CsTools/GuideCsUnitTest.cs").New();
 AddChild(tester);
 ```
+
 ### Go Back -> [Usage](usage.html)
+
+### Read Next -> [G.U.I.D.E Docs (External)](https://godotneers.github.io/G.U.I.D.E/)

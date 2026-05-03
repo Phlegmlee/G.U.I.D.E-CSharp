@@ -43,6 +43,8 @@ G.U.I.D.E-CSharp has full functionality on its own, see the [changelog](CHANGES.
 
 ### Read Next -> [Usage](usage.html)
 
+#### Read Next -> [G.U.I.D.E Docs (External)](https://godotneers.github.io/G.U.I.D.E/)
+
 ---
 
 ## [Issues](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues)
