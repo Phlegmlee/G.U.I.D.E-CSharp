@@ -127,8 +127,20 @@ static func for_context(context:GUIDEMappingContext, icon_size:int = 32) -> GUID
 		return null
 		
 	return GUIDEInputFormatter.new(icon_size, resolver)
+
+
+## Returns an input formatter that can format actions using the given contexts.
+static func for_contexts(contexts:Array[GUIDEMappingContext], icon_size:int = 32) -> GUIDEInputFormatter:
+	var resolver:Callable = func(action:GUIDEAction) -> GUIDEActionMapping:
+		for context in contexts:
+			for mapping in context.mappings:
+				if mapping.action == action:
+					return mapping
+		return null
 	
-	
+	return GUIDEInputFormatter.new(icon_size, resolver)
+
+
 ## Formats the action input as richtext with icons suitable for a RichTextLabel. This function
 ## is async as icons may need to be rendered in the background which can take a few frames, so 
 ## you will need to await on it.
