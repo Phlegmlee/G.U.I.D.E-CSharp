@@ -17,8 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
-## [Unreleased] - 2026-05-11
-###
+## [0.3.6-0.13.0] - 2026-05-11
+### Added
+- Remote function calls for translation added to the integrated version of guide.
 
 ## [0.2.6-0.13.0] - 2026-05-11
 ### Fixed
