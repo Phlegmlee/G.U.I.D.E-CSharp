@@ -17,7 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
-## [0.2.5--0.13.0]
+## [Unreleased] - 2026-05-11
+###
+
+## [0.2.5--0.13.0] - 2026-05-11
 ### Dependency Update
 - Guide plugin updated to new release version [0.13.0]. See the full G.U.I.D.E [Changelog](https://github.com/Phlegmlee/G.U.I.D.E/blob/main/CHANGES.md).
 
