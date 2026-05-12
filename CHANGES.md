@@ -20,6 +20,10 @@ VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 ## [Unreleased] - 2026-05-11
 ###
 
+## [0.2.6-0.13.0] - 2026-05-11
+### Fixed
+- Null reference exception in `Plugin.cs` fixed using an early return to check if the resource was null before passing to `GetClassName`.
+
 ## [0.2.5--0.13.0] - 2026-05-11
 ### Dependency Update
 - Guide plugin updated to new release version [0.13.0]. See the full G.U.I.D.E [Changelog](https://github.com/Phlegmlee/G.U.I.D.E/blob/main/CHANGES.md).

@@ -44,6 +44,8 @@ public partial class Plugin : EditorPlugin
         Script resourceScript = (Script)resource.GetScript();
         string savePath = resource.ResourcePath.TrimSuffix(".tres") + "CS.tres";
 
+        if (resourceScript == null) return;
+
         if (GetClassName(resourceScript) == "GUIDEMappingContext")
         {
             GuideMappingContext newCSmap = new();
