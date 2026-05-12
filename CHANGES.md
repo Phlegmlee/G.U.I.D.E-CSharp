@@ -2,7 +2,7 @@
 All notable changes to the G.U.I.D.E project will be documented in it's respective `CHANGE.md` file.
 
 ### Current G.U.I.D.E Version
-#### [0.12.0] - 2026-03-27
+#### [0.13.0] - 2026-05-11
 This is the version of GUIDE this repository is currently using.
 
 See the full G.U.I.D.E [Changelog](https://github.com/Phlegmlee/G.U.I.D.E/blob/main/CHANGES.md).
@@ -16,6 +16,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
+
+## [Unreleased] - 2026-05-11
+###
+
+## [0.2.5--0.13.0] - 2026-05-11
+### Dependency Update
+- Guide plugin updated to new release version [0.13.0]. See the full G.U.I.D.E [Changelog](https://github.com/Phlegmlee/G.U.I.D.E/blob/main/CHANGES.md).
 
 ## [0.2.5--0.12.0] - 2026-04-30
 ### Fixed

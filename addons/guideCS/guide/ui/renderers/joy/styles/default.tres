@@ -1,11 +1,15 @@
-[gd_resource type="Resource" script_class="GUIDEJoyRenderStyle" load_steps=7 format=3 uid="uid://x36d7y75jfnr"]
+[gd_resource type="Resource" script_class="GUIDEJoyRenderStyle" load_steps=11 format=3 uid="uid://x36d7y75jfnr"]
 
 [ext_resource type="Texture2D" uid="uid://veqjcwokdukw" path="res://addons/guideCS/guide/ui/renderers/joy/styles/button_empty.png" id="1_ctnxf"]
+[ext_resource type="Texture2D" uid="uid://oq2vvwgbdsh7" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_down.svg" id="2_f266k"]
 [ext_resource type="FontFile" uid="uid://cu8bvod6tnnwr" path="res://addons/guideCS/guide/ui/renderers/keyboard/styles/Lato-Black.ttf" id="2_uodat"]
 [ext_resource type="Texture2D" uid="uid://do001o6aysaxo" path="res://addons/guideCS/guide/ui/renderers/joy/styles/stick_empty.png" id="3_0cij2"]
 [ext_resource type="Texture2D" uid="uid://bmgxqbypegjxh" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_horizontal.svg" id="3_5228y"]
 [ext_resource type="Script" path="res://addons/guideCS/guide/ui/renderers/joy/guide_joy_render_style.gd" id="4_tknkj"]
+[ext_resource type="Texture2D" uid="uid://1swh072gtbb4" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_left.svg" id="5_4t7wy"]
+[ext_resource type="Texture2D" uid="uid://cjvs04qsrj8ap" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_right.svg" id="6_h1isa"]
 [ext_resource type="Texture2D" uid="uid://bu5nlug6uf03w" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_vertical.svg" id="6_p8c8i"]
+[ext_resource type="Texture2D" uid="uid://ni6lsbx1d2hf" path="res://addons/guideCS/guide/ui/renderers/textures/arrow_up.svg" id="9_2byf3"]
 
 [resource]
 script = ExtResource("4_tknkj")
@@ -16,3 +20,7 @@ font_color = Color(0.843, 0.843, 0.843, 1)
 font_size = 50
 horizontal = ExtResource("3_5228y")
 vertical = ExtResource("6_p8c8i")
+left = ExtResource("5_4t7wy")
+right = ExtResource("6_h1isa")
+up = ExtResource("9_2byf3")
+down = ExtResource("2_f266k")
