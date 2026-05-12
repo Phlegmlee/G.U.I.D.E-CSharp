@@ -149,3 +149,12 @@ func _editor_name() -> String:
 func _editor_description() -> String:
 	return "Fires, when the input exceeds the actuation threshold."
 
+
+## Remote call of steps set() for use in the C# wrapper.
+func remote_set_steps(step_items:Array) -> void:
+	steps.assign(step_items)
+
+
+## Remote call of cancellation_actions set() for use in the C# wrapper.
+func remote_set_cancellation_actions(actions:Array) -> void:
+	cancellation_actions.assign(actions)

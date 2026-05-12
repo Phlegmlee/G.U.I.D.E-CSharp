@@ -165,6 +165,7 @@ func _begin_detection():
 	# is currently pressed, it will switch to detection phase
 	set_process(true)
 
+
 ## Aborts a running detection. If no detection currently runs
 ## does nothing.
 func abort_detection() -> void:
@@ -399,3 +400,8 @@ func _deliver(input:GUIDEInput) -> void:
 	_status = DetectionState.INPUT_POST_CLEAR
 	# enable processing so we can check if the input is released before we re-enable GUIDE's mapping contexts
 	set_process(true)
+
+
+## Remote call of abort_detection_on set() for use in the C# wrapper.
+func remote_set_abort_detection_on(inputs:Array) -> void:
+	abort_detection_on.assign(inputs)

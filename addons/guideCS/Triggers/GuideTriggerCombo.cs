@@ -59,7 +59,7 @@ public partial class GuideTriggerCombo : GuideTrigger
         // file and add the function below:
          
         // func remote_set_steps(step_items:Array) -> void:
-        //     input_mappings.assign(step_items)
+        //     steps.assign(step_items)
 
         BaseGuideObject.Call("remote_set_steps", baseArray);
     }

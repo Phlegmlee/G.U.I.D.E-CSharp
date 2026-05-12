@@ -141,6 +141,12 @@ static func for_contexts(contexts:Array[GUIDEMappingContext], icon_size:int = 32
 	return GUIDEInputFormatter.new(icon_size, resolver)
 
 
+## Remote call of [method action_as_richtext_async] for use in the C# wrapper.
+func remote_action_as_richtext_async(callback:Callable, action:GUIDEAction):
+	var ret = await action_as_richtext_async(action)
+	callback.call(ret)
+
+
 ## Formats the action input as richtext with icons suitable for a RichTextLabel. This function
 ## is async as icons may need to be rendered in the background which can take a few frames, so 
 ## you will need to await on it.
@@ -152,6 +158,13 @@ func action_as_richtext_async(action:GUIDEAction) -> String:
 ## more light-weight than formatting as icons and returns immediately.
 func action_as_text(action:GUIDEAction) -> String:
 	return _materialized_as_text(_materialize_action_input(action))
+
+
+## Remote call of [method input_as_richtext_async]
+func remote_input_as_richtext_async(callback:Callable, input:GUIDEInput, materialize_actions:bool = true):
+	var ret = await input_as_richtext_async(input, materialize_actions)
+	callback.call(ret)
+
 
 ## Formats the input as richtext with icons suitable for a RichTextLabel. This function
 ## is async as icons may need to be rendered in the background which can take a few frames, so 

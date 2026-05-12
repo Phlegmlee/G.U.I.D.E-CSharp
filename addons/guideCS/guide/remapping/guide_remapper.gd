@@ -8,6 +8,14 @@ var _mapping_contexts:Array[GUIDEMappingContext] = []
 
 const GUIDESet = preload("../guide_set.gd")
 
+
+## Remote call of [method initialize] for use in the C# wrapper.
+func remote_initialize(mapping_contexts:Array, remapping_config:GUIDERemappingConfig) -> void:
+	var typed_array: Array[GUIDEMappingContext] = []
+	typed_array.assign(mapping_contexts)
+	initialize(typed_array, remapping_config)
+
+
 ## Loads the default bindings as they are currently configured in the mapping contexts and a mapping
 ## config for editing. Note that the given mapping config will not be modified, so editing can be
 ## cancelled. Call get_mapping_config to get the modified mapping config.

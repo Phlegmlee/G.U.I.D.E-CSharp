@@ -34,3 +34,8 @@ func _editor_name() -> String:
 		return resource_path.get_file()
 	else:
 		return display_name
+
+
+## Remote call of mappings set() for use in the C# wrapper.
+func remote_set_mappings(maps:Array) -> void:
+	mappings.assign(maps)

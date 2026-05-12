@@ -187,4 +187,12 @@ func _update_state(delta:float, value_type:GUIDEAction.GUIDEActionValueType) -> 
 	# return the best result
 	_state = result
 
-	
+
+## Remote call of modifiers set() for use in the C# wrapper.
+func remote_set_modifiers(mods:Array) -> void:
+	modifiers.assign(mods)
+
+
+## Remote call of triggers set() for use in the C# wrapper.
+func remote_set_triggers(trigs:Array) -> void:
+	triggers.assign(trigs)

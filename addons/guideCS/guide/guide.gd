@@ -134,6 +134,13 @@ func disable_mapping_context(context:GUIDEMappingContext) -> void:
 	context.disabled.emit()
 
 
+## Remote call of [method set_enabled_mapping_contexts] for use in the C# wrapper.
+func remote_set_enabled_mapping_contexts(context_items:Array) -> Array:
+	var typed_array: Array[GUIDEMappingContext] = []
+	typed_array.assign(context_items)
+	return set_enabled_mapping_contexts(typed_array)
+
+
 ## Replaces the currently enabled mapping contexts with a new set of contexts.
 ## This is more efficient than calling enable_mapping_context multiple times as it only
 ## updates the internal caches once. All contexts are enabled with priority 0, with contexts

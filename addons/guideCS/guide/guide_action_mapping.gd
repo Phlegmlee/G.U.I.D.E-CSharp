@@ -19,3 +19,8 @@ extends Resource
 			return
 		input_mappings = value
 		emit_changed()		
+
+
+## Remote call of input_mappings set() for use in the C# wrapper.
+func remote_set_input_mappings(maps:Array) -> void:
+	input_mappings.assign(maps)
