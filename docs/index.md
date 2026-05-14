@@ -17,6 +17,8 @@ G.U.I.D.E-CSharp has full functionality on its own, see the [changelog](CHANGES.
 
 ## Quick Start
 
+Below are the instructions for first install, for updating see [upgrading](upgrading.html).
+
 1. Make sure you are using the **C# version of Godot** (Godot-Mono/GodotSharp) and it is **at least version 4.2** or greater.
 1. Aquire the plugin using one of the following:
 	- Use the asset browser within Godot (Search "unified")
@@ -45,6 +47,8 @@ G.U.I.D.E-CSharp has full functionality on its own, see the [changelog](CHANGES.
 
 #### Read Next -> [G.U.I.D.E Docs (External)](https://godotneers.github.io/G.U.I.D.E/)
 
+#### Plugin already installed? See [Updating the Plugin](upgrading.html)
+
 ---
 
 ## [Issues](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues)
@@ -54,3 +58,6 @@ If you have any problems while using this plugin, create an [issue](https://gith
 
 ## [Gotchas](gotchas.html)
 - See the quirks of usage, the problems that have yet to be solved or can't be solved.
+
+---
+

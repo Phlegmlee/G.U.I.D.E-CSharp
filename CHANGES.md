@@ -17,11 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
-## [0.3.6-0.13.0] - 2026-05-11
+## [0.3.7--0.13.0] - 2026-05-14
+### Fixed
+- Projects created in, or upgraded to Godot versions >= 4.4 were having issues updating the plugin due to UID mismatch warnings/errors. UID files have been added. This change is fully compatable with Godot versions < 4.4 with no changes needed.
+	- For upgrading to this version of the plugin see [Updating the Plugin](https://phlegmlee.github.io/G.U.I.D.E-CSharp/upgrading.html).
+
+## [0.3.6--0.13.0] - 2026-05-11
 ### Added
 - Remote function calls for translation added to the integrated version of guide.
 
-## [0.2.6-0.13.0] - 2026-05-11
+## [0.2.6--0.13.0] - 2026-05-11
 ### Fixed
 - Null reference exception in `Plugin.cs` fixed using an early return to check if the resource was null before passing to `GetClassName`.
 
