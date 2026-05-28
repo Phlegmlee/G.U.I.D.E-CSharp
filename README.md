@@ -1,9 +1,10 @@
 # G.U.I.D.E C# - Godot Unified Input Detection Engine C#
 
-![maintained](https://img.shields.io/badge/Status-maintained-brightgreen.svg)
+[![maintained](https://img.shields.io/badge/Status-maintained-brightgreen.svg)](CHANGES.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)
 [![documentation](https://img.shields.io/badge/Documentation-D1D100.svg)](https://phlegmlee.github.io/G.U.I.D.E-CSharp)
-[![godot-store](https://img.shields.io/badge/Godot%20Store-478CBF.svg)](https://godotengine.org/asset-library/asset/5104)
+[![godot-store](https://img.shields.io/badge/Godot%20Asset%20Library-blue.svg)](https://godotengine.org/asset-library/asset/5104)
+[![godot-store](https://img.shields.io/badge/Godot%20Store-darkblue.svg)](https://store.godotengine.org/asset/phlegm/g-u-i-d-e-csharp/)
 
 G.U.I.D.E is an extension for the Godot Engine that allows you to easily use input from multiple sources, such as keyboard, mouse, gamepad and touch in a unified way. Gone are the days, where mouse input was handled differently from joysticks and touch was a totally different beast. No matter where the input comes from - your game code works the same way.
 
