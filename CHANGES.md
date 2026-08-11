@@ -17,8 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
+## [0.4.7--0.14.0] - 2026-08-10
+### Added
+- Wrapped the new Guide input "Joy Direction"
+
+### Fixed
+- The Joy Direction icon rendering visibility was causing all direction icons to appear as a blank anologue stick. Directions now render appropriatley, if the issue persists, close the project, delete the project cache and reopen.
+
 ## [0.3.7--0.14.0] - 2026-07-15
-## Dependency Update
+### Dependency Update
 - Guide plugin updated to new release version [0.14.0]. See the full G.U.I.D.E [Changelog](https://github.com/Phlegmlee/G.U.I.D.E/blob/main/CHANGES.md).
 
 ## [0.3.7--0.13.0] - 2026-05-14
