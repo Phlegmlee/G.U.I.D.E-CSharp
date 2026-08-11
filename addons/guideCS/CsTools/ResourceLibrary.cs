@@ -16,6 +16,7 @@ public static class ResourceLibrary
     public const string InputJoyAxis1DGdPath = $"{GuideInstallDirectory}/inputs/guide_input_joy_axis_1d.gd";
     public const string InputJoyAxis2DGdPath = $"{GuideInstallDirectory}/inputs/guide_input_joy_axis_2d.gd";
     public const string InputJoyButtonGdPath = $"{GuideInstallDirectory}/inputs/guide_input_joy_button.gd";
+    public const string InputJoyDirGdPath = $"{GuideInstallDirectory}/inputs/guide_input_joy_direction.gd";
     public const string InputKeyGdPath = $"{GuideInstallDirectory}/inputs/guide_input_key.gd";
     public const string InputMouseAxis1dGdPath = $"{GuideInstallDirectory}/inputs/guide_input_mouse_axis_1d.gd";
     public const string InputMouseAxis2dGdPath = $"{GuideInstallDirectory}/inputs/guide_input_mouse_axis_2d.gd";
@@ -84,6 +85,7 @@ public static class ResourceLibrary
         {"Joy Axis 1D", typeof(GuideInputJoyAxis1D) },
         {"Joy Axis 2D", typeof(GuideInputJoyAxis2D) },
         {"Joy Button", typeof(GuideInputJoyButton) },
+        {"Joy Direction", typeof(GuideInputJoyDirection) },
         {"Key", typeof(GuideInputKey) },
         {"Mouse Axis 1D", typeof(GuideInputMouseAxis1D) },
         {"Mouse Axis 2D", typeof(GuideInputMouseAxis2D) },
