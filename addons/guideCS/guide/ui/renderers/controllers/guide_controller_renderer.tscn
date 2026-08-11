@@ -127,41 +127,46 @@ stretch_mode = 5
 
 [node name="Directions" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
 [node name="LeftRight" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("2_vkejn")
 stretch_mode = 5
 
 [node name="Left" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("3_nmj5o")
 stretch_mode = 5
 
 [node name="Right" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("4_r10fs")
 stretch_mode = 5
 
 [node name="Up" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("5_y1q1y")
 stretch_mode = 5
 
 [node name="Down" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("6_6k52c")
 stretch_mode = 5
 
 [node name="UpDown" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("3_wqne5")
 stretch_mode = 5

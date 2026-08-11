@@ -52,41 +52,46 @@ vertical_alignment = 1
 
 [node name="Directions" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 
 [node name="Horizontal" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("5_jp034")
 stretch_mode = 5
 
 [node name="Left" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("6_ucx3k")
 stretch_mode = 5
 
 [node name="Right" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("7_44xen")
 stretch_mode = 5
 
 [node name="Up" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("8_1sajv")
 stretch_mode = 5
 
 [node name="Down" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("9_xgmc6")
 stretch_mode = 5
 
 [node name="Vertical" type="TextureRect" parent="Directions"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 texture = ExtResource("6_jimqg")
 stretch_mode = 5
