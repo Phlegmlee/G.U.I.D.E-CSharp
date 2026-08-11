@@ -340,7 +340,8 @@ public partial class GuideCsUnitTest : Node
         InputAny();
         InputJoyAxis1D(); 
         InputJoyAxis2D();
-        InputJoyButton(); 
+        InputJoyButton();
+        InputJoyDirection();
         InputKey(); 
         InputMouseAxis1D();
         InputMouseButton(); 
@@ -493,6 +494,15 @@ public partial class GuideCsUnitTest : Node
             w.Button = JoyButton.Touchpad;
             var t1y = w.Button; // Touchpad
             if (t1y != JoyButton.Touchpad) TestSuccess = false;
+        }
+
+        void InputJoyDirection()
+        {
+            var obj = (GodotObject)ResourceLoader.Load<GDScript>(ResourceLibrary.InputJoyDirGdPath).New();
+            var w = Utility.CreateWrapper<GuideInputJoyDirection>(obj);
+
+            var t2x = w.Axis; // LeftX
+            if (t2x != JoyAxis.LeftX) TestSuccess = false;
         }
 
         void InputKey()
