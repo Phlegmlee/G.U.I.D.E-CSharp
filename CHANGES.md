@@ -22,7 +22,7 @@ VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 - Wrapped the new Guide input "Joy Direction"
 
 ### Fixed
-- The Joy Direction icon rendering visibility was causing all direction icons to appear as a blank anologue stick. Directions now render appropriatley, if the issue persists, close the project, delete the project cache and reopen.
+- The Joy Direction icon rendering visibility was causing all direction icons to appear as a blank analogue stick. Directions now render appropriately, if the issue persists, close the project, delete the project cache and reopen.
 
 ## [0.3.7--0.14.0] - 2026-07-15
 ### Dependency Update
@@ -30,7 +30,7 @@ VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
 ## [0.3.7--0.13.0] - 2026-05-14
 ### Fixed
-- Projects created in, or upgraded to Godot versions >= 4.4 were having issues updating the plugin due to UID mismatch warnings/errors. UID files have been added. This change is fully compatable with Godot versions < 4.4 with no changes needed.
+- Projects created in, or upgraded to Godot versions >= 4.4 were having issues updating the plugin due to UID mismatch warnings/errors. UID files have been added. This change is fully compatible with Godot versions < 4.4 with no changes needed.
 	- For upgrading to this version of the plugin see [Updating the Plugin](https://phlegmlee.github.io/G.U.I.D.E-CSharp/upgrading.html).
 
 ## [0.3.6--0.13.0] - 2026-05-11
@@ -55,13 +55,13 @@ VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
 ## [0.1.4--0.12.0] - 2026-04-27
 ### Fixed
-- Editor was parially non-functional due to missing connections and export values.
+- Editor was partially non-functional due to missing connections and export values.
 
 ## [0.1.3--0.12.0] - 2026-04-26
 ### Added
 - Sub-addon functionality.
 ### Changed
-- Degraded features unique to 4.6 to make the plugin compatable with the same base version as GUIDE.
+- Degraded features unique to 4.6 to make the plugin compatible with the same base version as GUIDE.
 
 ## [0.1.2--0.12.0] - 2026-04-14
 ### Fixed
