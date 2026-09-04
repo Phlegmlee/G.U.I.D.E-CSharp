@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
@@ -62,7 +63,9 @@ public static class Utility
     /// <param name="obj">Base GUIDE object to look up.</param>
     /// <typeparam name="T">Type of wrapped resource that is desired.</typeparam>
     /// <returns>Wrapped resource of type T.</returns>
-    public static T GetCachedOrNew<T>(GodotObject obj) where T : GuideResource
+    public static T GetCachedOrNew<
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] T>(GodotObject obj)
+        where T : GuideResource
     {
         var res = GuideResource.GetWrappedResourceByBase<T>(obj);
         return res ?? CreateWrapper<T>(obj);
@@ -74,7 +77,9 @@ public static class Utility
     /// <typeparam name="T">Class type to wrap as. Must be of at least a root class of the object.<br />
     /// Example: If 'obj' is InputJoyButton, T can be GuideInputJoyButton, GuideInputJoyBase, or GuideInput.</typeparam>
     /// <returns>New GuideResource of type T.</returns>
-    public static T CreateWrapper<T>(GodotObject obj) where T : GuideResource
+    public static T CreateWrapper<
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] T>(GodotObject obj)
+        where T : GuideResource
     {
         Type type = null;
         
