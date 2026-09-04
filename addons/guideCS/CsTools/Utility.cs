@@ -81,7 +81,7 @@ public static class Utility
         [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] T>(GodotObject obj)
         where T : GuideResource
     {
-        Type type = null;
+        Func<GodotObject, GuideResource> factory = null;
         
         // Skip derive check if object is null
         if (obj is null) { }
@@ -90,7 +90,7 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideInput)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideInputTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideInputFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideInput)} type.");
             }
@@ -100,7 +100,7 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideModifier)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideModifierTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideModifierFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideModifier)} type.");
             }
@@ -110,15 +110,15 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideTrigger)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideTriggerTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideTriggerFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideTrigger)} type.");
             }
         }
 
-        type ??= typeof(T);
-    
-        return Activator.CreateInstance(type, obj) as T;
+        return factory is null
+            ? Activator.CreateInstance(typeof(T), obj) as T
+            : factory(obj) as T;
     }
 
     /// <summary>Helper function to retrieve the base GUIDE object from a wrapper or null. Useful when the wrapped resource

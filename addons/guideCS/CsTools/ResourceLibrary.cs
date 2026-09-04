@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Godot;
 
 namespace GuideCs;
 
@@ -77,59 +78,59 @@ public static class ResourceLibrary
     public const string MappingContextGdPath = $"{GuideInstallDirectory}/guide_mapping_context.gd";
     public const string ActionMappingGdPath = $"{GuideInstallDirectory}/guide_action_mapping.gd";
     
-    public static readonly Dictionary<string, Type> GuideInputTypes = new()
+    public static readonly Dictionary<string, Func<GodotObject, GuideResource>> GuideInputFactories = new()
     {
-        {"", typeof(GuideInput) },
-        {"Action", typeof(GuideInputAction) },
-        {"Any Input", typeof(GuideInputAny) },
-        {"Joy Axis 1D", typeof(GuideInputJoyAxis1D) },
-        {"Joy Axis 2D", typeof(GuideInputJoyAxis2D) },
-        {"Joy Button", typeof(GuideInputJoyButton) },
-        {"Joy Direction", typeof(GuideInputJoyDirection) },
-        {"Key", typeof(GuideInputKey) },
-        {"Mouse Axis 1D", typeof(GuideInputMouseAxis1D) },
-        {"Mouse Axis 2D", typeof(GuideInputMouseAxis2D) },
-        {"Mouse Button", typeof(GuideInputMouseButton) },
-        {"Mouse Position", typeof(GuideInputMousePosition) },
-        {"Touch Angle", typeof(GuideInputTouchAngle) },
-        {"Touch Axis1D", typeof(GuideInputTouchAxis1D) },
-        {"Touch Axis2D", typeof(GuideInputTouchAxis2D) },
-        {"Touch Distance", typeof(GuideInputTouchDistance) },
-        {"Touch Position", typeof(GuideInputTouchPosition) },
+        {"", obj => new GuideInput(obj) },
+        {"Action", obj => new GuideInputAction(obj) },
+        {"Any Input", obj => new GuideInputAny(obj) },
+        {"Joy Axis 1D", obj => new GuideInputJoyAxis1D(obj) },
+        {"Joy Axis 2D", obj => new GuideInputJoyAxis2D(obj) },
+        {"Joy Button", obj => new GuideInputJoyButton(obj) },
+        {"Joy Direction", obj => new GuideInputJoyDirection(obj) },
+        {"Key", obj => new GuideInputKey(obj) },
+        {"Mouse Axis 1D", obj => new GuideInputMouseAxis1D(obj) },
+        {"Mouse Axis 2D", obj => new GuideInputMouseAxis2D(obj) },
+        {"Mouse Button", obj => new GuideInputMouseButton(obj) },
+        {"Mouse Position", obj => new GuideInputMousePosition(obj) },
+        {"Touch Angle", obj => new GuideInputTouchAngle(obj) },
+        {"Touch Axis1D", obj => new GuideInputTouchAxis1D(obj) },
+        {"Touch Axis2D", obj => new GuideInputTouchAxis2D(obj) },
+        {"Touch Distance", obj => new GuideInputTouchDistance(obj) },
+        {"Touch Position", obj => new GuideInputTouchPosition(obj) },
     };
     
-    public static readonly Dictionary<string, Type> GuideModifierTypes = new()
+    public static readonly Dictionary<string, Func<GodotObject, GuideResource>> GuideModifierFactories = new()
     {
-        {"", typeof(GuideModifier) },
-        {"3D coordinates", typeof(GuideModifier3dCoordinates) },
-        {"8-way direction", typeof(GuideModifier8WayDirection) },
-        {"Canvas coordinates", typeof(GuideModifierCanvasCoordinates) },
-        {"Curve", typeof(GuideModifierCurve) },
-        {"Deadzone", typeof(GuideModifierDeadzone) },
-        {"Input Swizzle", typeof(GuideModifierInputSwizzle) },
-        {"Magnitude", typeof(GuideModifierMagnitude) },
-        {"Map Range", typeof(GuideModifierMapRange) },
-        {"Negate", typeof(GuideModifierNegate) },
-        {"Normalize", typeof(GuideModifierNormalize) },
-        {"Positive/Negative", typeof(GuideModifierPositiveNegative) },
-        {"Scale", typeof(GuideModifierScale) },
-        {"Virtual Cursor", typeof(GuideModifierVirtualCursor) },
-        {"Window relative", typeof(GuideModifierWindowRelative) },
+        {"", obj => new GuideModifier(obj) },
+        {"3D coordinates", obj => new GuideModifier3dCoordinates(obj) },
+        {"8-way direction", obj => new GuideModifier8WayDirection(obj) },
+        {"Canvas coordinates", obj => new GuideModifierCanvasCoordinates(obj) },
+        {"Curve", obj => new GuideModifierCurve(obj) },
+        {"Deadzone", obj => new GuideModifierDeadzone(obj) },
+        {"Input Swizzle", obj => new GuideModifierInputSwizzle(obj) },
+        {"Magnitude", obj => new GuideModifierMagnitude(obj) },
+        {"Map Range", obj => new GuideModifierMapRange(obj) },
+        {"Negate", obj => new GuideModifierNegate(obj) },
+        {"Normalize", obj => new GuideModifierNormalize(obj) },
+        {"Positive/Negative", obj => new GuideModifierPositiveNegative(obj) },
+        {"Scale", obj => new GuideModifierScale(obj) },
+        {"Virtual Cursor", obj => new GuideModifierVirtualCursor(obj) },
+        {"Window relative", obj => new GuideModifierWindowRelative(obj) },
     };
     
-    public static readonly Dictionary<string, Type> GuideTriggerTypes = new()
+    public static readonly Dictionary<string, Func<GodotObject, GuideResource>> GuideTriggerFactories = new()
     {
-        {"GUIDETrigger", typeof(GuideTrigger) },
-        {"Chorded Action", typeof(GuideTriggerChordedAction) },
-        {"Combo", typeof(GuideTriggerCombo) },
-        {"Down", typeof(GuideTriggerDown) },
-        {"Hair", typeof(GuideTriggerHair) },
-        {"Hold", typeof(GuideTriggerHold) },
-        {"Pressed", typeof(GuideTriggerPressed) },
-        {"Pulse", typeof(GuideTriggerPulse) },
-        {"Released", typeof(GuideTriggerReleased) },
-        {"Stability", typeof(GuideTriggerStability) },
-        {"Tap", typeof(GuideTriggerTap) },
+        {"GUIDETrigger", obj => new GuideTrigger(obj) },
+        {"Chorded Action", obj => new GuideTriggerChordedAction(obj) },
+        {"Combo", obj => new GuideTriggerCombo(obj) },
+        {"Down", obj => new GuideTriggerDown(obj) },
+        {"Hair", obj => new GuideTriggerHair(obj) },
+        {"Hold", obj => new GuideTriggerHold(obj) },
+        {"Pressed", obj => new GuideTriggerPressed(obj) },
+        {"Pulse", obj => new GuideTriggerPulse(obj) },
+        {"Released", obj => new GuideTriggerReleased(obj) },
+        {"Stability", obj => new GuideTriggerStability(obj) },
+        {"Tap", obj => new GuideTriggerTap(obj) },
     };
     
     
