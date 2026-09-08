@@ -1,35 +1,33 @@
+#nullable enable
+
 using Godot;
+
+namespace GuideCs.Examples;
 
 public partial class PlayerEntity : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	private const float Speed = 300.0f;
 
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
-	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	[Export] private GuideMappingContext BaseContext = null!;
+	[Export] private GuideAction Move = null!;
+
+	public override void _Ready()
+	{
+		Guide.EnableMappingContext(BaseContext);
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
+		Vector2 velocity;
 
-		// Add the gravity.
-		if (!IsOnFloor())
-			velocity.Y += gravity * (float)delta;
-
-		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-			velocity.Y = JumpVelocity;
-
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+		Vector2 direction = Move.ValueAxis2d;
 		if (direction != Vector2.Zero)
 		{
-			velocity.X = direction.X * Speed;
+			velocity = direction * Speed;
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			velocity = Vector2.Zero;
 		}
 
 		Velocity = velocity;

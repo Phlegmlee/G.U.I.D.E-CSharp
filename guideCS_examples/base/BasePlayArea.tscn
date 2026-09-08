@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bopddhurl3cup"]
+[gd_scene load_steps=7 format=3 uid="uid://bopddhurl3cup"]
 
 [ext_resource type="Script" path="res://guideCS_examples/base/PlayerEntity.cs" id="1_ucxkk"]
+[ext_resource type="Resource" uid="uid://irj664f54feu" path="res://guideCS_examples/base/mapping_contexts/code/BaseContext.tres" id="2_g6r0k"]
+[ext_resource type="PackedScene" uid="uid://dkr80d2pi0d41" path="res://addons/guideCS/guide/debugger/guide_debugger.tscn" id="2_y1o6s"]
+[ext_resource type="Resource" uid="uid://bowuck2wvxblg" path="res://guideCS_examples/base/actions/code/Move.tres" id="3_l8dgm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_81kh3"]
 
@@ -11,10 +14,26 @@ height = 30.0
 [node name="BasePlayArea" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(450, 200)
 script = ExtResource("1_ucxkk")
+BaseContext = ExtResource("2_g6r0k")
+Move = ExtResource("3_l8dgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_81kh3")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
 mesh = SubResource("CapsuleMesh_08rue")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GuideDebugger" parent="UI" instance=ExtResource("2_y1o6s")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_top = -58.0
+offset_right = 156.0
+offset_bottom = 58.0
+grow_horizontal = 1
+size_flags_vertical = 0
