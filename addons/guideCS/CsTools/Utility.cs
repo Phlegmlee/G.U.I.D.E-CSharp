@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
@@ -62,7 +63,9 @@ public static class Utility
     /// <param name="obj">Base GUIDE object to look up.</param>
     /// <typeparam name="T">Type of wrapped resource that is desired.</typeparam>
     /// <returns>Wrapped resource of type T.</returns>
-    public static T GetCachedOrNew<T>(GodotObject obj) where T : GuideResource
+    public static T GetCachedOrNew<
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] T>(GodotObject obj)
+        where T : GuideResource
     {
         var res = GuideResource.GetWrappedResourceByBase<T>(obj);
         return res ?? CreateWrapper<T>(obj);
@@ -74,9 +77,11 @@ public static class Utility
     /// <typeparam name="T">Class type to wrap as. Must be of at least a root class of the object.<br />
     /// Example: If 'obj' is InputJoyButton, T can be GuideInputJoyButton, GuideInputJoyBase, or GuideInput.</typeparam>
     /// <returns>New GuideResource of type T.</returns>
-    public static T CreateWrapper<T>(GodotObject obj) where T : GuideResource
+    public static T CreateWrapper<
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicConstructors)] T>(GodotObject obj)
+        where T : GuideResource
     {
-        Type type = null;
+        Func<GodotObject, GuideResource> factory = null;
         
         // Skip derive check if object is null
         if (obj is null) { }
@@ -85,7 +90,7 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideInput)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideInputTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideInputFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideInput)} type.");
             }
@@ -95,7 +100,7 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideModifier)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideModifierTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideModifierFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideModifier)} type.");
             }
@@ -105,15 +110,15 @@ public static class Utility
         else if (typeof(T).IsAssignableFrom(typeof(GuideTrigger)))
         {
             var name = obj.Call("_editor_name").AsString();
-            if (!ResourceLibrary.GuideTriggerTypes.TryGetValue(name, out type))
+            if (!ResourceLibrary.GuideTriggerFactories.TryGetValue(name, out factory))
             {
                 GD.PushWarning($"Unknown {nameof(GuideTrigger)} type.");
             }
         }
 
-        type ??= typeof(T);
-    
-        return Activator.CreateInstance(type, obj) as T;
+        return factory is null
+            ? Activator.CreateInstance(typeof(T), obj) as T
+            : factory(obj) as T;
     }
 
     /// <summary>Helper function to retrieve the base GUIDE object from a wrapper or null. Useful when the wrapped resource
