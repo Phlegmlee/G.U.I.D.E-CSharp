@@ -17,6 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 VERSIONING: [GUIDE C# VERSION--GUIDE VERSION]
 
+## [0.5.7--0.14.0] - 2026-09-08
+## Fixed
+- Native AOT Analyzer warning, see [#9](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/issues/9) and [#11](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/pull/11).
+
+## Added
+- Proper examples of Guide wrapper usage, see [#13](https://github.com/Phlegmlee/G.U.I.D.E-CSharp/pull/13).
+
 ## [0.4.7--0.14.0] - 2026-08-10
 ### Added
 - Wrapped the new Guide input "Joy Direction"

@@ -6,7 +6,7 @@
 
 
 ## MODERATE:
-- [ ] Create new example projects.
+- [ ] .
 
 
 ## LOW:
@@ -24,3 +24,4 @@
 - [x] File modification woes, being an interop layer, not everything translates smoothly from C# to GDScript and vice-versa. There are several functions that require you to modify GUIDE files and add an extra function for things to translate correctly. These are all checked on invoke and will provide an error warning if the required modifications are missing. Should this be a permanent change to the bundled guide?
   - [x] Overhead thoughts?
   - [x] Guide version upgraded issues?
+- [x] Create new example projects.
