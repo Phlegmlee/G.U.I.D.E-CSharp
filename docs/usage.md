@@ -87,7 +87,7 @@ If you don't use `[Export]` properties and would prefer to load and manage your 
 
         foreach (var kvp in guideActions)
         {
-            var guideBaseObject = (GodotObject)ResourceLoader.Load<GDScript>(kvp.Value).New();
+            var guideBaseObject = (GodotObject)ResourceLoader.Load(kvp.Value);
             var wrappedAction = Utility.CreateWrapper<GuideAction>(guideBaseObject);
             WrappedActions.TryAdd(kvp.Key, wrappedAction);
         }
