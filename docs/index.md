@@ -37,6 +37,7 @@ Below are the instructions for first install, for updating see [upgrading](upgra
     <details>
     <img width="609" height="234" alt="plugin-enabled" src="https://github.com/user-attachments/assets/fcfd4e19-aac5-4382-b074-1fd00e740493" />
     </details>
+1. Ensure the `GuideCs` autoload is BELOW the `GUIDE`autoload in Project Settings > Globals > Autoloads.
 1. Restart your project.
     <details>
     <img width="400" height="400" alt="plugin-enabled" src="assets/images/reload_project.png" />
